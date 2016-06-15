@@ -1,0 +1,49 @@
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">     
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="/"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+			<li class="active">Categories</li>
+		</ol>
+	</div><!--/.row-->
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Categories</h1>
+		</div>
+	</div><!--/.row-->
+			
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Category list
+					<span class="text-right"><a href="/category/add" class="btn btn-success">Add new</a></span>
+				</div>
+				<div class="panel-body">
+					<table data-toggle="table">
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Alias</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+							</thead>
+							<% categories.forEach( function( items ){ %>
+							<tr>
+								<td><%= items.name %></td>
+								<td><%= items.alias %></td>
+								<td><%= items.status %></td>
+								<td>
+									<a class="btn btn-default" href="/category/edit/<%= items.id %>">Edit</a>
+									<a onclick="confirm('Are you sure want to remove this item?')" class="btn btn-default" href="/category/delete/<%= items.id %>">Delete</a>
+								</td>
+							</tr>
+							<% }) %>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div><!--/.row-->  
+	
+</div><!--/.main-->
