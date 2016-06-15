@@ -25,3 +25,6 @@ CREATE TABLE IF NOT EXISTS `categories` (
 After everything is set, run it ```sails lift```
 
 ### Done!
+
+Note : This app using Lumino, a free bootstrap based beautiful template from MediaLoot. Thanks!
+http://medialoot.com/item/lumino-admin-bootstrap-template/
